@@ -1,0 +1,365 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 45px 18px;
+    background: #fff;
+    color: #252525;
+    font: 14px Arial, sans-serif;
+}
+
+main {
+    width: 720px;
+    max-width: 100%;
+    margin: auto;
+    padding: 7px;
+    background: #c4c4c4;
+    border: 2px solid #697985;
+    border-radius: 9px;
+    box-shadow: 0 0 0 5px #e4e4e4, 0 7px 18px #0003;
+}
+
+header {
+    height: 34px;
+    padding: 7px 12px;
+    color: #20354b;
+    background: linear-gradient(#b6cee7, #789bc6);
+    border: 1px solid #718dab;
+    font-size: 16px;
+}
+
+header span, footer {
+    display: none;
+}
+
+section {
+    padding: 12px 16px 18px;
+    border: 2px groove #e2e2e2;
+    border-top: 0;
+}
+
+section:has(form) {
+    position: relative;
+}
+
+section:has(form)::before {
+    content: 'Datos personales';
+    display: inline-block;
+    padding: 7px 9px;
+    border: 1px solid #aaa;
+    background: #bdbdbd;
+    color: #444;
+}
+
+section:has(form) h1 {
+    display: inline-block;
+    margin: 0 0 22px;
+    padding: 7px 9px;
+    font-size: 14px;
+    font-weight: normal;
+    background: #c4c4c4;
+    border: 1px solid #aaa;
+    border-bottom-color: #c4c4c4;
+}
+
+section:has(form) > .paso, section:has(form) > h1 + p {
+    display: none;
+}
+
+.campos {
+    position: relative;
+    height: 240px;
+    margin-top: 3px;
+}
+
+.campos > label {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: normal;
+}
+
+input:not([type=radio]) {
+    min-width: 0;
+    height: 29px;
+    padding: 3px 6px;
+    background: #d0d0d0;
+    border: 2px inset #e0e0e0;
+    border-radius: 0;
+    color: #222;
+    font: 14px Arial, sans-serif;
+}
+
+label[for=fecha] {
+    left: 8px;
+    top: 4px;
+}
+
+label[for=fecha] input {
+    width: 198px;
+    margin-left: 20px;
+}
+
+fieldset {
+    position: absolute;
+    left: 0;
+    top: 63px;
+    width: 145px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+legend {
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+.opcion {
+    display: block;
+    margin: 0 0 12px;
+    white-space: nowrap;
+}
+
+input[type=radio] {
+    accent-color: #666;
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+}
+
+label[for=monto] {
+    left: 155px;
+    top: 67px;
+}
+
+label[for=monto] input {
+    width: 135px;
+    margin-left: 12px;
+}
+
+label[for=periodo] {
+    left: 405px;
+    top: 67px;
+    font-size: 0;
+    gap: 9px;
+}
+
+label[for=periodo]::before {
+    content: 'Periodo';
+    font-size: 14px;
+}
+
+label[for=periodo]::after {
+    content: 'meses';
+    font-size: 14px;
+}
+
+label[for=periodo] input {
+    width: 47px;
+}
+
+label[for=cuota] {
+    left: 196px;
+    top: 120px;
+    gap: 48px;
+}
+
+label[for=cuota] input {
+    width: 130px;
+}
+
+label[for=tea] {
+    left: 17px;
+    top: 186px;
+    font-size: 0;
+    gap: 12px;
+}
+
+label[for=tea]::before {
+    content: 'TEA';
+    font-size: 14px;
+}
+
+label[for=tea]::after {
+    content: '%';
+    font-size: 14px;
+}
+
+label[for=tea] input {
+    width: 60px;
+}
+
+label[for=vencimiento] {
+    left: 239px;
+    top: 179px;
+    gap: 20px;
+}
+
+label[for=vencimiento] input {
+    width: 161px;
+}
+
+button, .boton {
+    display: inline-block;
+    background: linear-gradient(#d6d6d6,#bbb);
+    color: #222;
+    border: 2px outset #dedede;
+    border-radius: 0;
+    padding: 6px 10px;
+    font: 14px Arial, sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+form > button {
+    display: block;
+    margin: 0 89px 0 auto;
+}
+
+button:active, .boton:active {
+    border-style: inset;
+}
+
+:focus-visible {
+    outline: 2px solid #175a99;
+    outline-offset: 3px;
+}
+
+.error {
+    padding: 10px;
+    color: #8a1515;
+    background: #fff0ef;
+    border: 1px solid #b96464;
+    line-height: 1.4;
+}
+
+.paso {
+    font-size: 12px;
+    color: #415a71;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    background: #d2d2d2;
+}
+
+caption {
+    text-align: left;
+    padding-bottom: 8px;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #999;
+    overflow-wrap: anywhere;
+}
+
+th {
+    width: 48%;
+    background: #bbb;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .campos {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .campos > label, fieldset {
+        position: static;
+        width: 100%;
+    }
+
+    .campos > label {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .campos > label input {
+        margin-left: auto;
+        width: 55%;
+    }
+
+    label[for=periodo] input, label[for=tea] input {
+        width: 35%;
+    }
+
+    fieldset {
+        order: 0;
+    }
+
+    legend {
+        margin-bottom: 10px;
+    }
+
+    form > button {
+        margin: 22px 0 0 auto;
+    }
+}
+
+.tabla-scroll {
+    overflow-x: auto;
+    margin: 18px 0;
+}
+
+.pagos {
+    min-width: 640px;
+    margin: 0;
+    background: #f9f9f9;
+}
+
+.pagos th {
+    width: auto;
+    background: #52ada8;
+    color: #fff;
+}
+
+.pagos th, .pagos td {
+    padding: 9px 6px;
+    border-color: #d2dddd;
+    overflow-wrap: normal;
+}
+
+.pagos td:first-child {
+    white-space: nowrap;
+}
+
+.pagos input[type=number] {
+    width: 112px;
+    background: #fff;
+}
+
+.pagos .importe {
+    text-align: right;
+    white-space: nowrap;
+}
+
+button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+h2 {
+    font-size: 19px;
+    margin-top: 25px;
+}

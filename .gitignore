@@ -1,0 +1,7 @@
+target/
+.local/
+.env
+.DS_Store
+.mvn/maven.config
+__pycache__/
+*.pyc
